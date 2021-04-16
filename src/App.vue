@@ -1,6 +1,7 @@
-<template><div class="hello">
+<template>
+  <div class="hello">
     <h1>Hello WARUDO</h1>
-</div>
+  </div>
 </template>
 
 <script>
