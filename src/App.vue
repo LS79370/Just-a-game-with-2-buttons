@@ -1,4 +1,6 @@
-<template>
+<template><div class="hello">
+    <h1>Hello WARUDO</h1>
+</div>
 </template>
 
 <script>
@@ -15,5 +17,4 @@ export default {
 <style>
 #app {
 }
-
 </style>
