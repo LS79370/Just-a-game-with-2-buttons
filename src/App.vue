@@ -1,20 +1,4 @@
 <template>
-<<<<<<< HEAD
-    <article>
-        Test Netlify
-    </article>
-</template >
-
-<script>
-//import HelloWorld from "./components/HelloWorld.vue";
-
-export default {
-    name: "App",
-    components: {
-        //HelloWorld,
-     },
-};
-=======
     <div class="hello">
         <h1>Test de bouton</h1>
         <p>I receive Money</p>
@@ -49,10 +33,9 @@ export default {
         }
         document.getElementById("count").innerHTML = "Vous avez cliqué sur un bouton " + localStorage.clicked + " fois!";
     }
->>>>>>> CSHTML+JS
 </script>
 
 <style>
-#app {
-}
+    #app {
+    }
 </style>
