@@ -8,16 +8,16 @@
                 index: 0,
                 image: null,
                 images: [{
-                    id: 1, src:".\\assets\\img\\choice.png", alt:"Choix"
+                    id: 0, src:".\\assets\\img\\choice.png", alt:"Choix"
                 },
                 {
-                    id: 2, src:".\\assets\\img\\sweat.png", alt:"Sweat"
+                    id: 1, src:".\\assets\\img\\sweat.png", alt:"Sweat"
                 },
                 {
-                    id: 3, src:".\\assets\\img\\thumbup.png", alt:"Thumbup"
+                    id: 2, src:".\\assets\\img\\thumbup.png", alt:"Thumbup"
                 },
                 {
-                    id: 4, src:".\\assets\\img\\twice.png", alt:"Twice"
+                    id: 3, src:".\\assets\\img\\twice.png", alt:"Twice"
                 }
                 ]
             }
@@ -32,8 +32,8 @@
 
             pouf: function() {
                 this.image = this.images[this.index];
-                this.index = (this.index + 1) % this.images.length;
                 this.result = this.index;
+                this.index = (this.index + 1) % this.images.length;
             },
         }
     };
@@ -52,7 +52,7 @@
             <button v-on:click="no">Refuse</button>
             <p>{{result}}</p>
         </div>
-        <img v-if="image" :key="image.id" v-on:click="pouf" class="image" :src="image.src" alt="image.alt"> <br />
+        <img src=".\\assets\\img\\twice.png" alt="image.alt"> <br />
         <button v-on:click="pouf">Bouton</button>
     </div>
 </template>
