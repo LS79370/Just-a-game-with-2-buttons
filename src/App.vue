@@ -1,15 +1,18 @@
 <script>
-    new Vue({
+    export default {
         el: '#test',
+        data() {
+            return {
+                result: "",
+            }
+        },
         methods: {
-            action: function yes() {
-                
+            yes: function() {
+                this.result = "oui";
             }
         }
-    })
-
+    };
 </script>
-
 
 <template>
     <div class="hello">
@@ -20,9 +23,9 @@
             Do you accept?
         </p>
         <div class="button">
-            <button id="button-yes" onclick="yes()">Accept</button>
+            <button id="button-yes" v-on:click="yes">Accept</button>
             <button id="button-no" onclick="no()">Refuse</button>
-            <p>{{R}} </p>
+            {{ result }}
         </div>
     </div>
 </template>
