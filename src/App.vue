@@ -1,21 +1,23 @@
 <script>
     export default {
-        el: '#test',
+        el: "#hello",
         data() {
             return {
-                index:0,
                 result: "",
+
+                index: 0,
+                image: null,
                 images: [{
-                    id: 1, src: ".\assets\img\choice.png", alt: "Choix"
+                    id: 1, src:".\\assets\\img\\choice.png", alt:"Choix"
                 },
                 {
-                    id: 2, src:".\assets\img\sweat.png", alt:"Sweat"
+                    id: 2, src:".\\assets\\img\\sweat.png", alt:"Sweat"
                 },
                 {
-                    id: 3, src: ".\assets\img\thumbup.png", alt: "Thumbup"
+                    id: 3, src:".\\assets\\img\\thumbup.png", alt:"Thumbup"
                 },
                 {
-                    id: 4, src: ".\assets\img\twice.png", alt: "Twice"
+                    id: 4, src:".\\assets\\img\\twice.png", alt:"Twice"
                 }
                 ]
             }
@@ -24,12 +26,14 @@
             yes: function() {
                 this.result = "Merci de ton argent";
             },
-            no: function () {
+            no: function() {
                 this.result = "Haha, perdu";
             },
 
-            pouf: function () {
-                this.result = "Prout";
+            pouf: function() {
+                this.image = this.images[this.index];
+                this.index = (this.index + 1) % this.images.length;
+                this.result = this.index;
             },
         }
     };
@@ -46,10 +50,10 @@
         <div class="button">
             <button v-on:click="yes">Accept</button>
             <button v-on:click="no">Refuse</button>
-            <p>{{ result }}</p>
+            <p>{{result}}</p>
         </div>
-        <img src=".\assets\img\choice.png" alt="Choix" /> <br />
-        <button class="test" v-on:click="pouf">Bouton</button>
+        <img v-if="image" :key="image.id" v-on:click="pouf" class="image" :src="image.src" alt="image.alt"> <br />
+        <button v-on:click="pouf">Bouton</button>
     </div>
 </template>
 
