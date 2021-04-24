@@ -33,8 +33,8 @@
 
             pouf: function() {
                 this.image = this.images[this.index];
-                this.index = (this.index + 1) % this.images.length;
                 this.result = this.index;
+                this.index = (this.index + 1) % this.images.length;
             },
         }
     };
@@ -52,8 +52,8 @@
             <h1>Juste un jeu avec 2 boutons...</h1>
         </header>
         <div class="game-scene">
-            <pre><h2>Atteindrez-vous la planète Mars ?</h2></pre>
-            <pre>Finalement, vous n'avez pas assez de vivres pour tout l'équipage... il vous faut éjecter un membre (-1) ou consommer plus de carburant pour aller faire les courses(-2).</pre>
+            <pre><h2>Atteindrez-vous la plan�te Mars ?</h2></pre>
+            <pre>Finalement, vous n'avez pas assez de vivres pour tout l'�quipage... il vous faut �jecter un membre (-1) ou consommer plus de carburant pour aller faire les courses(-2).</pre>
             <div class="game-ui">
                 <img src=".\\assets\\img\\twice.png" alt="capitaine" />
                 <div class="controller">
