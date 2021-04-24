@@ -1,10 +1,13 @@
 <script>
     export default {
-        el: '#test',
+        el: "#hello",
         data() {
             return {
                 index: 0,
                 result: "",
+
+                index: 0,
+                image: null,
                 images: [{
                     id: 1, src: ".\\assets\\img\\choice.png", alt: "Choix"
                 },
@@ -24,12 +27,14 @@
             yes: function () {
                 this.result = "Merci de ton argent";
             },
-            no: function () {
+            no: function() {
                 this.result = "Haha, perdu";
             },
 
-            pouf: function () {
-                this.result = "Prout";
+            pouf: function() {
+                this.image = this.images[this.index];
+                this.index = (this.index + 1) % this.images.length;
+                this.result = this.index;
             },
         }
     };
