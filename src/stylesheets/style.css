@@ -1,8 +1,119 @@
-body {
-    background-color: lightblue;
+app
+{
+    font-family: 'Space Grotesk', sans-serif;
 }
 
-h1 {
-    color: navy;
+header
+{
+    padding-top: 1em;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
 
+footer
+{
+    color: white;
+    background-color: black;
+    text-align:center;
+    padding: 1em;
+}
+
+h1
+{
+    color : white;
+    font-size: 2em;
+    font-family: 'Verdana', sans-serif;
+}
+
+h2 {
+    color: black;
+    font-size: 2em;
+    text-align: center;
+}
+
+p
+{
+    font-size: 1em;
+    text-align: justify;
+}
+
+ul
+{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row; 
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+}
+
+button
+{
+    border: 0.5em solid red;
+    border-radius: 1em;
+    color: red;
+    background-color: white;
+    padding: 1em;
+    font-size: 1em;
+}
+
+button:hover
+{
+    border-color: white;
+    color: white;
+    background-color: red;
+}
+
+button:focus
+{
+    border-color: red;
+    color: red;
+    background-color: black;
+}
+
+button:visited
+{
+    border-color: red;
+    color: red;
+    background-color: white;
+}
+
+.body
+{
+    background-color: grey;
+}
+
+.game-scene
+{
+    padding-top: 2em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.game-ui
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em;
+}
+
+.controller {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 3em;
+}
+
+.icon 
+{
+    height: 4em;
+    width: auto;
+    margin-right: 1em;
 }

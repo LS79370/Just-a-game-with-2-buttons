@@ -3,23 +3,29 @@
         el: "#hello",
         data() {
             return {
-                test: "", //variable qui affiche les images. elle prend une valeur dans boup et face
                 index: 0,
-                items: [ //liste des images
-                    require(".\\assets\\img\\choice.png"),
-                    require(".\\assets\\img\\twice.png"),
-                    require(".\\assets\\img\\sweat.png"),
-                    require(".\\assets\\img\\thumbup.png")
-                ],
-                pilote: [],
+                result: "",
+                images: [{
+                    id: 1, src: ".\\assets\\img\\choice.png", alt: "Choix"
+                },
+                {
+                    id: 2, src: ".\\assets\\img\\sweat.png", alt: "Sweat"
+                },
+                {
+                    id: 3, src: ".\\assets\\img\\thumbup.png", alt: "Thumbup"
+                },
+                {
+                    id: 4, src: ".\\assets\\img\\twice.png", alt: "Twice"
+                }
+                ]
             }
         },
         mounted() {
             this.cycle();
         },
         methods: {
-            cycle: function () { // sert � initialiser l'image, que y'ai pas un trou
-                this.test = this.items[this.index];
+            yes: function () {
+                this.result = "Merci de ton argent";
             },
             boup: function () { // affiche que les images des bouton : choice et twice
                 this.index = (this.index + 1) % 2;
@@ -38,18 +44,19 @@
     <div class="body">
         <head>
             <meta charset="utf-8" />
-            <link rel="preconnect" href="https://fonts.gstatic.com">
-            <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
         </head>
         <header>
             <img class="icon" src=".\\assets\\logo.png" alt="logo" />
             <h1>Juste un jeu avec 2 boutons...</h1>
         </header>
         <div class="game-scene">
-            <pre><h2>Atteindrez-vous la plan�te Mars ?</h2></pre>
-            <pre>Finalement, vous n'avez pas assez de vivres pour tout l'�quipage... il vous faut �jecter un membre (-1) ou consommer plus de carburant pour aller faire les courses(-2).</pre>
+            <h2>Atteindrez-vous la plan�te Mars ?</h2>
+            <p>
+                Finalement, vous n�avez pas assez de vivres pour tout l��quipage�
+                <br />il vous faut �jecter un membre (-1) ou consommer plus de carburant pour aller faire les courses(-2).
+            </p>
             <div class="game-ui">
-                <img v-bind:src="test" alt="capitaine" />
+                <img src=".\\assets\\img\\twice.png" alt="capitaine" />
                 <div class="controller">
                     <ul>
                         <li>
@@ -65,20 +72,22 @@
                             </h2>
                         </li>
                     </ul>
-                    <button v-on:click="pouf">Ejecter un membre</button>
-                    <button v-on:click="face">Faire les courses</button>
+                    <button>Ejecter un membre</button>
+                    <button>Faire les courses</button>
                 </div>
             </div>
         </div>
         <footer>
-            <pre>
+            <p>
                 Jeu d�velopp� par F�lix Delesalle et Lilian Sananikone, �tudiants au CNAM-ENJMIN.
-            </pre>
+            </p>
         </footer>
     </div>
 </template>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
     @import '.\\stylesheets\\style.css';
 </style>
+
+
