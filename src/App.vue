@@ -5,21 +5,14 @@
             return {
                 index: 0,
                 result: "",
-
+                test: require(".\\assets\\img\\sweat.png"),
                 index: 0,
                 image: null,
-                images: [{
-                    id: 1, src: ".\\assets\\img\\choice.png", alt: "Choix"
-                },
-                {
-                    id: 2, src: ".\\assets\\img\\sweat.png", alt: "Sweat"
-                },
-                {
-                    id: 3, src: ".\\assets\\img\\thumbup.png", alt: "Thumbup"
-                },
-                {
-                    id: 4, src: ".\\assets\\img\\twice.png", alt: "Twice"
-                }
+                items: [
+                { test: require(".\\assets\\img\\choice.png") },
+                { test: require(".\\assets\\img\\sweat.png") },
+                { test: require(".\\assets\\img\\thumbup.png") },
+                { test: require(".\\assets\\img\\twice.png") }
                 ]
             }
         },
@@ -32,9 +25,9 @@
             },
 
             pouf: function() {
-                this.image = this.images[this.index];
+                this.image = this.items[this.index];
                 this.result = this.index;
-                this.index = (this.index + 1) % this.images.length;
+                this.index = (this.index + 1) % this.items.length;
             },
         }
     };
