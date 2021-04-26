@@ -16,7 +16,7 @@
             }
         },
         methods: {
-            yes: function() {
+            yes: function () {
                 this.result = "Merci de ton argent";
             },
             no: function() {
