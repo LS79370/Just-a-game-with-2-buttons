@@ -3,16 +3,15 @@
         el: "#hello",
         data() {
             return {
-                index: 0,
                 result: "",
                 test: require(".\\assets\\img\\sweat.png"),
                 index: 0,
                 image: null,
                 items: [
-                { test: require(".\\assets\\img\\choice.png") },
-                { test: require(".\\assets\\img\\sweat.png") },
-                { test: require(".\\assets\\img\\thumbup.png") },
-                { test: require(".\\assets\\img\\twice.png") }
+                    { test: require(".\\assets\\img\\choice.png") },
+                    { test: require(".\\assets\\img\\sweat.png") },
+                    { test: require(".\\assets\\img\\thumbup.png") },
+                    { test: require(".\\assets\\img\\twice.png") }
                 ]
             }
         },
