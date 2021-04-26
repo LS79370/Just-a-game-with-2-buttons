@@ -3,9 +3,9 @@
         el: "#hello",
         data() {
             return {
-                result: "",
-                test: require(".\\assets\\img\\sweat.png"),
+                test: "", //variable qui affiche les images. elle prend une valeur dans boup et face
                 index: 0,
+<<<<<<< HEAD
                 image: null,
                 items: [
                 { test: require(".\\assets\\img\\choice.png") },
@@ -13,9 +13,22 @@
                 { test: require(".\\assets\\img\\thumbup.png") },
                 { test: require(".\\assets\\img\\twice.png") }
                 ]
+=======
+                items: [ //liste des images
+                    require(".\\assets\\img\\choice.png"),
+                    require(".\\assets\\img\\twice.png"),
+                    require(".\\assets\\img\\sweat.png"),
+                    require(".\\assets\\img\\thumbup.png")
+                ],
+                pilote: [],
+>>>>>>> html
             }
         },
+        mounted() {
+            this.cycle();
+        },
         methods: {
+<<<<<<< HEAD
             yes: function () {
                 this.result = "Merci de ton argent";
             },
@@ -27,12 +40,26 @@
                 this.image = this.items[this.index];
                 this.result = this.index;
                 this.index = (this.index + 1) % this.items.length;
+=======
+            cycle: function () { // sert à initialiser l'image, que y'ai pas un trou
+                this.test = this.items[this.index];
             },
+            boup: function () { // affiche que les images des bouton : choice et twice
+                this.index = (this.index + 1) % 2;
+                this.test = this.items[this.index];
+>>>>>>> html
+            },
+            face: function () { //affiche que le pilote sweat et thumbup
+                this.pilote = this.items.slice(2);
+                this.index = (this.index + 1) % 2;
+                this.test = this.pilote[this.index];
+            }
         }
     };
 </script>
 
 <template>
+<<<<<<< HEAD
     <div class="hello">
         <h1>Test de bouton</h1>
         <p>I receive Money</p>
@@ -47,10 +74,52 @@
         </div>
         <img v-bind:src="test" v-on:click="pouf" alt="image.alt"> <br />
         <button v-on:click="pouf">Bouton</button>
+=======
+    <div class="body">
+        <head>
+            <meta charset="utf-8" />
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+        </head>
+        <header>
+            <img class="icon" src=".\\assets\\logo.png" alt="logo" />
+            <h1>Juste un jeu avec 2 boutons...</h1>
+        </header>
+        <div class="game-scene">
+            <pre><h2>Atteindrez-vous la planète Mars ?</h2></pre>
+            <pre>Finalement, vous n'avez pas assez de vivres pour tout l'équipage... il vous faut éjecter un membre (-1) ou consommer plus de carburant pour aller faire les courses(-2).</pre>
+            <div class="game-ui">
+                <img v-bind:src="test" alt="capitaine" />
+                <div class="controller">
+                    <ul>
+                        <li>
+                            <img class="icon" src=".\\assets\\img\\crewmate.png" alt="crew" />
+                            <h2>
+                                15
+                            </h2>
+                        </li>
+                        <li>
+                            <img class="icon" src=".\\assets\\img\\lightning.png" alt="spaceship" />
+                            <h2>
+                                20
+                            </h2>
+                        </li>
+                    </ul>
+                    <button v-on:click="pouf">Ejecter un membre</button>
+                    <button v-on:click="face">Faire les courses</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <pre>
+                Jeu développé par Félix Delesalle et Lilian Sananikone, étudiants au CNAM-ENJMIN.
+            </pre>
+        </footer>
+>>>>>>> html
     </div>
 </template>
 
 <style>
-    app{
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+    @import '.\\stylesheets\\style.css';
 </style>
