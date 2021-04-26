@@ -5,15 +5,6 @@
             return {
                 test: "", //variable qui affiche les images. elle prend une valeur dans boup et face
                 index: 0,
-<<<<<<< HEAD
-                image: null,
-                items: [
-                { test: require(".\\assets\\img\\choice.png") },
-                { test: require(".\\assets\\img\\sweat.png") },
-                { test: require(".\\assets\\img\\thumbup.png") },
-                { test: require(".\\assets\\img\\twice.png") }
-                ]
-=======
                 items: [ //liste des images
                     require(".\\assets\\img\\choice.png"),
                     require(".\\assets\\img\\twice.png"),
@@ -21,33 +12,18 @@
                     require(".\\assets\\img\\thumbup.png")
                 ],
                 pilote: [],
->>>>>>> html
             }
         },
         mounted() {
             this.cycle();
         },
         methods: {
-<<<<<<< HEAD
-            yes: function () {
-                this.result = "Merci de ton argent";
-            },
-            no: function() {
-                this.result = "Haha, perdu";
-            },
-
-            pouf: function() {
-                this.image = this.items[this.index];
-                this.result = this.index;
-                this.index = (this.index + 1) % this.items.length;
-=======
-            cycle: function () { // sert à initialiser l'image, que y'ai pas un trou
+            cycle: function () { // sert ï¿½ initialiser l'image, que y'ai pas un trou
                 this.test = this.items[this.index];
             },
             boup: function () { // affiche que les images des bouton : choice et twice
                 this.index = (this.index + 1) % 2;
                 this.test = this.items[this.index];
->>>>>>> html
             },
             face: function () { //affiche que le pilote sweat et thumbup
                 this.pilote = this.items.slice(2);
@@ -59,22 +35,6 @@
 </script>
 
 <template>
-<<<<<<< HEAD
-    <div class="hello">
-        <h1>Test de bouton</h1>
-        <p>I receive Money</p>
-        <p>
-            You <strong><em>receive</em></strong> Nothing <br>
-            Do you accept?
-        </p>
-        <div class="button">
-            <button v-on:click="yes">Accept</button>
-            <button v-on:click="no">Refuse</button>
-            <p>{{result}}</p>
-        </div>
-        <img v-bind:src="test" v-on:click="pouf" alt="image.alt"> <br />
-        <button v-on:click="pouf">Bouton</button>
-=======
     <div class="body">
         <head>
             <meta charset="utf-8" />
@@ -86,8 +46,8 @@
             <h1>Juste un jeu avec 2 boutons...</h1>
         </header>
         <div class="game-scene">
-            <pre><h2>Atteindrez-vous la planète Mars ?</h2></pre>
-            <pre>Finalement, vous n'avez pas assez de vivres pour tout l'équipage... il vous faut éjecter un membre (-1) ou consommer plus de carburant pour aller faire les courses(-2).</pre>
+            <pre><h2>Atteindrez-vous la planï¿½te Mars ?</h2></pre>
+            <pre>Finalement, vous n'avez pas assez de vivres pour tout l'ï¿½quipage... il vous faut ï¿½jecter un membre (-1) ou consommer plus de carburant pour aller faire les courses(-2).</pre>
             <div class="game-ui">
                 <img v-bind:src="test" alt="capitaine" />
                 <div class="controller">
@@ -112,10 +72,9 @@
         </div>
         <footer>
             <pre>
-                Jeu développé par Félix Delesalle et Lilian Sananikone, étudiants au CNAM-ENJMIN.
+                Jeu dï¿½veloppï¿½ par Fï¿½lix Delesalle et Lilian Sananikone, ï¿½tudiants au CNAM-ENJMIN.
             </pre>
         </footer>
->>>>>>> html
     </div>
 </template>
 
