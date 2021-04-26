@@ -39,17 +39,16 @@
     <div class="body">
         <head>
             <meta charset="utf-8" />
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
         </head>
         <header>
             <img class="icon" src=".\\assets\\logo.png" alt="logo" />
             <h1>Juste un jeu avec 2 boutons...</h1>
         </header>
         <div class="game-scene">
-            <h2>Atteindrez-vous la planète Mars ?</h2>
-            <p>
-                Finalement, vous n’avez pas assez de vivres pour tout l’équipage…
-                <br />il vous faut éjecter un membre (-1) ou consommer plus de carburant pour aller faire les courses(-2).
-            </p>
+            <pre><h2>Atteindrez-vous la planÃ¨te Mars ?</h2></pre>
+            <pre>Finalement, vous n'avez pas assez de vivres pour tout l'Ã©quipage... il vous faut Ã©jecter un membre (-1) ou consommer plus de carburant pour aller faire les courses(-2).</pre>
             <div class="game-ui">
                 <img src=".\\assets\\img\\twice.png" alt="capitaine" />
                 <div class="controller">
@@ -73,15 +72,15 @@
             </div>
         </div>
         <footer>
-            <p>
-                Jeu développé par Félix Delesalle et Lilian Sananikone, étudiants au CNAM-ENJMIN.
-            </p>
+            <pre>
+                Jeu dÃ©veloppÃ© par FÃ©lix Delesalle et Lilian Sananikone, Ã©tudiants au CNAM-ENJMIN.
+            </pre>
         </footer>
     </div>
 </template>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
     @import '.\\stylesheets\\style.css';
 </style>
 
