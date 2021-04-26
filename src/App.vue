@@ -3,31 +3,33 @@
         el: "#hello",
         data() {
             return {
-                result: "",
-                test: require(".\\assets\\img\\sweat.png"),
+                test: "", //variable qui affiche les images. elle prend une valeur dans boup et face
                 index: 0,
-                image: null,
-                items: [
-                    { test: require(".\\assets\\img\\choice.png") },
-                    { test: require(".\\assets\\img\\sweat.png") },
-                    { test: require(".\\assets\\img\\thumbup.png") },
-                    { test: require(".\\assets\\img\\twice.png") }
-                ]
+                items: [ //liste des images
+                    require(".\\assets\\img\\choice.png"),
+                    require(".\\assets\\img\\twice.png"),
+                    require(".\\assets\\img\\sweat.png"),
+                    require(".\\assets\\img\\thumbup.png")
+                ],
+                pilote: [],
             }
         },
+        mounted() {
+            this.cycle();
+        },
         methods: {
-            yes: function () {
-                this.result = "Merci de ton argent";
+            cycle: function () { // sert � initialiser l'image, que y'ai pas un trou
+                this.test = this.items[this.index];
             },
-            no: function() {
-                this.result = "Haha, perdu";
+            boup: function () { // affiche que les images des bouton : choice et twice
+                this.index = (this.index + 1) % 2;
+                this.test = this.items[this.index];
             },
-
-            pouf: function() {
-                this.image = this.items[this.index];
-                this.result = this.index;
-                this.index = (this.index + 1) % this.items.length;
-            },
+            face: function () { //affiche que le pilote sweat et thumbup
+                this.pilote = this.items.slice(2);
+                this.index = (this.index + 1) % 2;
+                this.test = this.pilote[this.index];
+            }
         }
     };
 </script>
@@ -47,7 +49,7 @@
             <pre><h2>Atteindrez-vous la plan�te Mars ?</h2></pre>
             <pre>Finalement, vous n'avez pas assez de vivres pour tout l'�quipage... il vous faut �jecter un membre (-1) ou consommer plus de carburant pour aller faire les courses(-2).</pre>
             <div class="game-ui">
-                <img src=".\\assets\\img\\twice.png" alt="capitaine" />
+                <img v-bind:src="test" alt="capitaine" />
                 <div class="controller">
                     <ul>
                         <li>
@@ -63,8 +65,8 @@
                             </h2>
                         </li>
                     </ul>
-                    <button>Ejecter un membre</button>
-                    <button>Faire les courses</button>
+                    <button v-on:click="pouf">Ejecter un membre</button>
+                    <button v-on:click="face">Faire les courses</button>
                 </div>
             </div>
         </div>
