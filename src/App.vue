@@ -1,27 +1,22 @@
 <script>
     export default {
-        el: '#test',
+        el: "#hello",
         data() {
             return {
-                index:0,
                 result: "",
-                images: [{
-                    id: 1, src: ".\assets\img\choice.png", alt: "Choix"
-                },
-                {
-                    id: 2, src:".\assets\img\sweat.png", alt:"Sweat"
-                },
-                {
-                    id: 3, src: ".\assets\img\thumbup.png", alt: "Thumbup"
-                },
-                {
-                    id: 4, src: ".\assets\img\twice.png", alt: "Twice"
-                }
+                test: require(".\\assets\\img\\sweat.png"),
+                index: 0,
+                image: null,
+                items: [
+                    { test: require(".\\assets\\img\\choice.png") },
+                    { test: require(".\\assets\\img\\sweat.png") },
+                    { test: require(".\\assets\\img\\thumbup.png") },
+                    { test: require(".\\assets\\img\\twice.png") }
                 ]
             }
         },
         methods: {
-            yes: function() {
+            yes: function () {
                 this.result = "Merci de ton argent";
             },
             no: function () {
@@ -29,7 +24,9 @@
             },
 
             pouf: function () {
-                this.result = "Prout";
+                this.image = this.items[this.index];
+                this.result = this.index;
+                this.index = (this.index + 1) % this.items.length;
             },
         }
     };
