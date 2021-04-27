@@ -22,21 +22,23 @@ footer
 h1
 {
     color : white;
-    font-size: 2em;
+    font-size: 200%;
     font-family: 'Verdana', sans-serif;
 }
 
 h2 {
     color: black;
     font-family: 'Space Mono', monospace;
-    font-size: 2em;
+    font-size: 150%;
     text-align: center;
+    margin: 2em 0em 2em 2em;
 }
 
 p {
     font-family: 'Space Mono', monospace;
-    font-size: 1em;
+    font-size: 110%;
     text-align: justify;
+    margin: 0em 2em;
 }
 
 ul
@@ -83,6 +85,11 @@ button:active
     background-color: black;
 }
 
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
 .body
 {
     background-color: grey;
@@ -98,30 +105,23 @@ button:active
 @media screen and (min-width: 320px) and (max-width: 768px) {
 
     .game-scene {
-        padding: 2em;
+        padding: 4em 2em 4em 0em;
         background-color: white;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        margin: 0em 10em;
+        margin: 0em 5em;
     }
 
     .game-ui {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 1em;
+        margin: 0.5em;
     }
 
-    .controller {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        margin-left: 3em;
-    }
-
-    ul {
+    .liste{
         order: 1;
     }
 
@@ -130,7 +130,7 @@ button:active
     }
 
     .buttons {
-        order: 3;
+        order: 1;
     }
 }
 
