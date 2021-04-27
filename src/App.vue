@@ -81,9 +81,9 @@
                 </div>
         </div>
         <footer>
-            <pre>
+            <p>
                 Jeu développé par Félix Delesalle et Lilian Sananikone, étudiants au CNAM-ENJMIN.
-            </pre>
+            </p>
         </footer>
     </div>
 </template>
