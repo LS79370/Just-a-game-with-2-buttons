@@ -71,13 +71,6 @@ button:hover
     background-color: red;
 }
 
-button:focus
-{
-    border-color: red;
-    color: red;
-    background-color: white;
-}
-
 button:active
 {
     border-color: red;
