@@ -67,6 +67,7 @@
         </header>
         <div class="game-scene">
             <h2>Atteindrez-vous la planète Mars ?</h2>
+
             <p>
                 {{mission_15}}
             </p>
@@ -95,9 +96,9 @@
             </div>
         </div>
         <footer>
-            <p>
+            <pre>
                 Jeu développé par Félix Delesalle et Lilian Sananikone, étudiants au CNAM-ENJMIN.
-            </p>
+            </pre>
         </footer>
     </div>
 </template>
