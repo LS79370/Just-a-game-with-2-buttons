@@ -52,29 +52,33 @@
             <h1>Juste un jeu avec 2 boutons...</h1>
         </header>
         <div class="game-scene">
-            <pre><h2>Atteindrez-vous la planète Mars ?</h2></pre>
-            <pre>Finalement, vous n'avez pas assez de vivres pour tout l'équipage... il vous faut éjecter un membre (-1) ou consommer plus de carburant pour aller faire les courses(-2).</pre>
-            <div class="game-ui">
-                <img src=".\\assets\\img\\twice.png" alt="capitaine" />
-                <div class="controller">
-                    <ul>
-                        <li>
-                            <img class="icon" src=".\\assets\\img\\crewmate.png" alt="crew" />
-                            <h2>
-                                15
-                            </h2>
-                        </li>
-                        <li>
-                            <img class="icon" src=".\\assets\\img\\lightning.png" alt="spaceship" />
-                            <h2>
-                                20
-                            </h2>
-                        </li>
-                    </ul>
-                    <button>Ejecter un membre</button>
-                    <button>Faire les courses</button>
+            <h2>Atteindrez-vous la planète Mars ?</h2>
+            <p>
+                Finalement, vous n'avez pas assez de vivres pour tout l'équipage... il vous faut éjecter un membre (-1) ou consommer plus de carburant pour aller faire les courses(-2).
+            </p>
+                <div class="game-ui">
+                    <img class="reactionImg" src=".\\assets\\img\\twice.png" alt="capitaine" />
+                    <div class="controller">
+                        <ul>
+                            <li>
+                                <img class="icon" src=".\\assets\\img\\crewmate.png" alt="crew" />
+                                <h2>
+                                    15
+                                </h2>
+                            </li>
+                            <li>
+                                <img class="icon" src=".\\assets\\img\\lightning.png" alt="spaceship" />
+                                <h2>
+                                    20
+                                </h2>
+                            </li>
+                        </ul>
+                        <div class="buttons">
+                            <button>Ejecter un membre</button>
+                            <button>Faire les courses</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </div>
         <footer>
             <pre>
