@@ -9,6 +9,8 @@
             return {
                 missnbr: 0,
                 previous: 0,
+                decodedNFC: "",
+
                 resultat: "", //variable qui affiche les images. elle prend une valeur dans boup et face
                 index: 0,
                 images: [ //liste des images
@@ -28,7 +30,7 @@
                 sauts: 12,
                 Titre: "Atteindrez vous la planète Mars?",
                 joker: 1,
-                verif: "joke",
+                verif: "skip",
             }
         },
         mounted() {
@@ -129,23 +131,39 @@
             Twice: function () {
                 this.resultat = this.images[1];
             },
-            Pass: function () {
-                if (this.joker <= 0) {
-                    this.joker = 0;
-                }
-                else {
-                    this.joker = this.joker - 1;
-                    this.sauts = this.sauts - 1;
-                    this.previous = this.missnbr;
-                    this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
-                    while (this.previous == this.missnbr || this.missnbr == 0) {
-                        this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
+            async Pass() {
+                if ("NDEFReader" in window) {
+                    const ndef = new NDEFReader();
+                    try {
+                        await ndef.scan();
+                        ndef.onreading = event => {
+                            const decoder = new TextDecoder();
+                            /*global NDEFReader*/
+                            let record = event.message.records[0];
+                            this.decodedNFC = decoder.decode(record.data);
+                            if (this.decodedNFC == this.verif) {
+                                if (this.joker <= 0) {
+                                    this.joker = 0;
+                                }
+                                else {
+                                    this.joker = this.joker - 1;
+                                    this.sauts = this.sauts - 1;
+                                    this.previous = this.missnbr;
+                                    this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
+                                    while (this.previous == this.missnbr || this.missnbr == 0) {
+                                        this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
+                                    }
+                                    this.cycle();
+                                }
+                            }
+                        }
+                    } catch (error) {
+                        this.Titre = error;
                     }
-                    this.cycle();
                 }
             }
-        }
-    };
+        },
+    }
 </script>
 
 <template>
