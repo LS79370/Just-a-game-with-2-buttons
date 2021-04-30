@@ -30,7 +30,6 @@
                 sauts: 12,
                 Titre: "Atteindrez vous la planète Mars?",
                 joker: 1,
-                verif: "skip",
             }
         },
         mounted() {
@@ -141,7 +140,7 @@
                             /*global NDEFReader*/
                             let record = event.message.records[0];
                             this.decodedNFC = decoder.decode(record.data);
-                            if (this.decodedNFC == this.verif) {
+                            if (this.decodedNFC == "skip") {
                                 if (this.joker <= 0) {
                                     this.joker = 0;
                                 }
