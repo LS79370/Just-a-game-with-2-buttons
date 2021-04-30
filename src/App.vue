@@ -9,7 +9,14 @@
             return {
                 missnbr: 0,
                 previous: 0,
-
+                resultat: "", //variable qui affiche les images. elle prend une valeur dans boup et face
+                index: 0,
+                items: [ //liste des images
+                    require(".\\assets\\img\\choice.png"),
+                    require(".\\assets\\img\\twice.png"),
+                    require(".\\assets\\img\\sweat.png"),
+                    require(".\\assets\\img\\thumbup.png")
+                ],
                 missions: initiateMissions(),
                 TXT1: initiateButton1(),
                 TXT2: initiateButton2(),
