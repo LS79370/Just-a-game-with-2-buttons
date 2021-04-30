@@ -36,6 +36,7 @@
                 CB2: [-1, -2, -3, -3, -2, -3, -3, -2, -3, -1, -1, -2, -1, -5, -3, -2],
                 TXTB1: "", //textes des boutons
                 TXTB2: "",
+                TXTB3:"Joker!",
                 TXT1: ["En route vers l'aventure!", //texte bouton 1
                     "Ignorer Patrick",
                     "Présurisez l'engin",
@@ -76,6 +77,7 @@
                 ship: 21,
                 sauts: 12,
                 Titre: "Atteindrez vous la planète Mars?",
+                joker : 3,
             }
         },
         mounted() {
@@ -119,12 +121,10 @@
                         this.sauts = this.sauts - 1;
                         this.previous = this.missnbr;
                         this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
-                        if (this.previous == this.missnbr || this.missnbr == 0) {
+                        while (this.previous == this.missnbr || this.missnbr == 0) {
                             this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
                         }
-                        else {
-                            this.cycle();
-                        }
+                        this.cycle();
                     }
                 }
             },
@@ -144,21 +144,21 @@
                         this.sauts = this.sauts - 1;
                         this.previous = this.missnbr;
                         this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
-                        if (this.previous == this.missnbr || this.missnbr == 0) {
+                        while (this.previous == this.missnbr || this.missnbr == 0) {
                             this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
                         }
-                        else {
-                            this.cycle();
-                        }
+                        this.cycle();
                     }
                 }
             },
             Victoire: function () { //Vous avez gagné
+                this.joker = 0;
                 this.resultat = this.items[3];
                 this.Titre = "VICTOIRE!";
                 this.mission = "Vous avez réussi! Vous êtes arrivés à atteidre la planète Mars! La planète rouge est à vous! Vous serez inscrit dans l'histoire!";
                 this.TXTB1 = this.TXT2[16];
                 this.TXTB2 = this.TXT2[16];
+                this.TXTB3 = this.TXT2[16];
             },
             echec: function () { //Vous avez perdu
                 this.members = 0;
@@ -168,6 +168,7 @@
                 this.mission = "Mince! Vous avez raté votre mission... Que ce soit par manque de personnel, ou que votre vaisseau est devenu une véritable passoire, il n'empêche que vous avez perdu!";
                 this.TXTB1 = this.TXT2[17];
                 this.TXTB2 = this.TXT2[17];
+                this.TXTB3 = this.TXT2[17];
             },
             Tension: function () {
                 this.resultat = this.items[0];
@@ -181,7 +182,21 @@
             Twice: function () {
                 this.resultat = this.items[1];
         },
-        
+            Pass: function () {
+                if (this.joker == 0) {
+                    this.mission = "Désolé vous avez utilisé tous vos jokers! " + this.missionlist[this.missnbr];
+                }
+                else {
+                    this.joker = this.joker - 1;
+                    this.sauts = this.sauts - 1;
+                    this.previous = this.missnbr;
+                    this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
+                    while (this.previous == this.missnbr || this.missnbr == 0) {
+                        this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
+                    }
+                    this.cycle();
+                }
+            }
         },
     };
 </script>
@@ -221,7 +236,7 @@
                     <div class="buttons">
                         <button v-on:click="Button1" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXTB1}}</button>
                         <button v-on:click="Button2" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXTB2}}</button>
-                        <button v-on:click="Button2" v-on:mouseover="Twice" v-on:mouseleave="Part">Une autre option?</button>
+                        <button v-on:click="Pass" v-on:mouseover="Twice" v-on:mouseleave="Part">{{TXTB3}}</button>
                     </div>
                     
                 </div>

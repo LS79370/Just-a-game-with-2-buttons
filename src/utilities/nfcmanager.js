@@ -22,22 +22,6 @@ export default function (Vue)
             });
             callback()
         },
-        writeNdefTag(ndefType, ndefValue, callback)
-        {
-            var ndef = {};
-            ndef[ndefType] = ndefValue;
-            chrome.nfc.write(device, { "ndef": [ndef] }, function (rc)
-            {
-                if (!rc)
-                {
-                    console.log('NFC Tag written!');
-                }
-                else
-                {
-                    console.log('NFC Tag write operation failed', rc);
-                }
-            });
-        },
 
         runTagChecker() {
             if (!tag_detected) {
