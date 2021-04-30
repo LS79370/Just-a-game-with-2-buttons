@@ -1,11 +1,20 @@
 <script>
     import initiateMissions from './utilities/scenarios';
+    import initiateButton1 from './utilities/Bouton1';
+    import initiateButton2 from './utilities/Bouton2';
 
     export default {
         el: "#hello",
         data() {
             return {
+                missnbr: 0,
+                previous: 0,
+
                 missions: initiateMissions(),
+                TXT1: initiateButton1(),
+                TXT2: initiateButton2(),
+                CB1: [0, -1, -1, -1, -1, -4, -3, -1, -2, -2, -4, -1, -1, -3, -3, -4], //listes des prix
+                CB2: [-1, -2, -3, -3, -2, -3, -3, -2, -3, -1, -1, -2, -1, -5, -3, -2],
             }
         },
         mounted() {
