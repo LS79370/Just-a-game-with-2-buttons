@@ -14,7 +14,6 @@ npm run serve
 ```
 ### L'Idée...
 L'idée était de de quelque chose qui nous amusait, le meme avec la personne devant un choix difficile : 2 boutons !
-
 Vous trouverez un exemple ci-dessous.
 ![image](./src/assets/img/readme/meme.jpg)
 #### Le Jeu
