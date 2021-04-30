@@ -1,6 +1,6 @@
 function initiateMissions()
 {
-    var mission_0 = "Votre but est d'atteindre la planète Mars sans perdre tout votre équipage (<img class='littleIcon' src='../../crewmate.png' alt='crew'/>) ou tous les éléments de votre vaisseau (<img class='littleIcon' src='../../lightning.png' alt='spaceship'/>). Pour commencer, faites décoler le vaiseau(-1<img class='littleIcon' src='../../lightning.png' alt='spaceship'/>) !";
+    var mission_0 = "Votre but est d'atteindre la planète Mars sans perdre tout votre équipage (<img class='littleIcon' src='../../crewmate.png' alt='crew'/>) ou tous les éléments de votre vaisseau (<img class='littleIcon' src='../../lightning.png' alt='spaceship'/>). Pour commencer, faites décoller le vaiseau(-1<img class='littleIcon' src='../../lightning.png' alt='spaceship'/>) !";
 
     var mission_1 = "Ah mince ! Vous n'avez pas attendu Patrick, il est resté sur Terre. Faites demi-tour (-2<img class='littleIcon' src='../../lightning.png' alt='spaceship'/>) ou ignorez-le (-1<img class='littleIcon' src='../../crewmate.png' alt='crew'/>)...";
 
