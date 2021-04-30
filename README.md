@@ -23,6 +23,7 @@ Nous avons donc décider de nous réinterpréter cette image au sein d'un jeu en li
 vous êtes le capitaine d'une navette spatiale en route vers Mars et à l'aide de 2 boutons, vous devez faire des choix difficiles pour arriver à destination avec un vaisseau en bon état et un équipage le plus complet possible...
 #### L'Inspiration
 Le jeu *Sort the court* est notre principale inspiration. Dans ce jeu, vous dirigez un royaume et devez sacrifiez des ressources pour faire en sorte que votre royaume ne s'effondre pas.
+
 ![image](./src/assets/img/readme/sortTheCourt.png)
 
 Dans notre jeu, vous devez alterner entre sacrifier **des membres de votre équipage** ou **des parties de votre vaisseau** le temps d'un trajet vers Mars, le but étant d'arriver sur la planète dans un vaisseau (pas forcément entier) et avec une équipe (plus ou moins réduite).
