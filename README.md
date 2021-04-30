@@ -24,6 +24,7 @@ vous êtes le capitaine d'une navette spatiale en route vers Mars et à l'aide de 
 #### L'Inspiration
 Le jeu *Sort the court* est notre principale inspiration. Dans ce jeu, vous dirigez un royaume et devez sacrifiez des ressources pour faire en sorte que votre royaume ne s'effondre pas.
 ![image](./src/assets/img/readme/sortTheCourt.png)
+
 Dans notre jeu, vous devez alterner entre sacrifier **des membres de votre équipage** ou **des parties de votre vaisseau** le temps d'un trajet vers Mars, le but étant d'arriver sur la planète dans un vaisseau (pas forcément entier) et avec une équipe (plus ou moins réduite).
 ### Un petit plus
 Nous avons eu l'idée d'ajouter un joker dans le jeu, à utilisation unique ! Il vous permettra de passer une des péripéties les plus difficiles !
