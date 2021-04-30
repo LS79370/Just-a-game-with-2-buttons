@@ -1,6 +1,6 @@
 # Juste un jeu avec 2 boutons
 ## Récupération du projet
-Nous vous invitons à télécharger le projet à ce trouvant à cette adresse :
+Nous vous invitons à télécharger le projet web à ce trouvant à cette adresse :
 ```
 https://github.com/LS79370/Button
 ```
@@ -12,6 +12,7 @@ Vous pouvez ensuite lancer le projet avec la commande ci-après, vous le retrouve
 ```
 npm run serve
 ```
+Vous pouvez sinon aller sur le site à cette adresse : https://just-a-game-with-2-buttons.netlify.app/.
 ### L'Idée...
 L'idée était de de quelque chose qui nous amusait, le meme avec la personne devant un choix difficile : 2 boutons !
 Vous trouverez un exemple ci-dessous.
