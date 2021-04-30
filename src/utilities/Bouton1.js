@@ -1,10 +1,10 @@
 function initiateButton1() {
 
-    var txt0 = "En route vers l'aventure!";
+    var txt0 = "En route vers l'aventure !";
 
     var txt1 = "Ignorer Patrick";
 
-    var txt2 = "Présurisez l'engin";
+    var txt2 = "Presurisez l'engin";
 
     var txt3 = "Condamner Thibal";
 
@@ -18,7 +18,7 @@ function initiateButton1() {
 
     var txt8 = "La cohésion";
 
-    var txt9 = "Envoyer les subordonnés";
+    var txt9 = "Envoyer les subordonnes";
 
     var txt10 = "Licencier";
 
@@ -26,15 +26,15 @@ function initiateButton1() {
 
     var txt12 = "Envoyer Ulysse";
 
-    var txt13 = "Les capsules!";
+    var txt13 = "Les capsules !";
 
     var txt14 = "Qu'ils y aillent seuls";
 
-    var txt15 = "AU COMBAT!";
+    var txt15 = "AU COMBAT !";
 
-    var txt16 = "Bravo!";
+    var txt16 = "Bravo !";
 
-    var txt17 = "Perdu!";
+    var txt17 = "Perdu !";
 
     return [txt0, txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10, txt11, txt12, txt13, txt14, txt15, txt16, txt17]
 }

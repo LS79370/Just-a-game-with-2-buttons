@@ -1,6 +1,6 @@
 function initiateButton2() {
 
-    var txt0 = "En route vers l'aventure!";
+    var txt0 = "En route vers l'aventure !";
 
     var txt1 = "Faire demi-tour";
 
@@ -18,7 +18,7 @@ function initiateButton2() {
 
     var txt8 = "L'entretien";
 
-    var txt9 = "Allô?";
+    var txt9 = "Allo ?";
 
     var txt10 = "Les sauver";
 
@@ -28,13 +28,13 @@ function initiateButton2() {
 
     var txt13 = "Réparer le système";
 
-    var txt14 = "POUR LES CHIPS!";
+    var txt14 = "POUR LES CHIPS !";
 
     var txt15 = "Condamner le pont";
 
-    var txt16 = "Bravo!";
+    var txt16 = "Bravo !";
 
-    var txt17 = "Perdu!";
+    var txt17 = "Perdu !";
 
     return [txt0, txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10, txt11, txt12, txt13, txt14, txt15, txt16, txt17]
 }

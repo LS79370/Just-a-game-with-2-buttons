@@ -41,7 +41,6 @@
         methods: {
             cycle: function () { // sert à initialiser l'image, le texte les coûts
                 this.resultat = this.images[2];
-                this.missions = this.missionlist[this.missnbr];
             },
             Button1: function () { //paye le coût en members, vérifie si les members est supp à 0, si oui, continue, sinon echec. Si oui, décrémente sauts, jusqu'à victoire
                 if (this.missnbr == 3 || this.missnbr == 4 || this.missnbr == 0) {
@@ -109,15 +108,14 @@
                 this.resultat = this.images[3];
                 this.Titre = "VICTOIRE!";
                 this.missnbr = 16;
-                this.missions = this.missionlist[this.missnbr];
             },
             echec: function () { //Vous avez perdu
+                this.joker = 0;
                 this.members = 0;
                 this.ship = 0;
                 this.resultat = this.images[2];
                 this.missnbr = 17;
                 this.Titre = "Oh non!";
-                this.missions = this.missionlist[this.missnbr];
             },
             Tension: function () {
                 this.resultat = this.images[0];
@@ -133,7 +131,7 @@
             },
             Pass: function () {
                 if (this.joker <= 0) {
-                    this.mission = "Désolé vous avez utilisé tous vos jokers! " + this.missionlist[this.missnbr];
+                    this.joker = 0;
                 }
                 else {
                     this.joker = this.joker - 1;
