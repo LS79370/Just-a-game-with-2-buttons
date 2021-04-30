@@ -1,5 +1,53 @@
+<template>
+    <div class="body">
+        <head>
+            <meta charset="utf-8" />
+        </head>
+        <header>
+            <img class="icon" src=".\\assets\\logo.png" alt="logo" />
+            <h1>Juste un jeu avec 2 boutons...</h1>
+        </header>
+        <div class="game-scene">
+            <h2>{{Titre}}</h2>
+
+            <p>
+                {{mission}}
+            </p>
+            <div class="game-ui">
+                <img class="reactionImg" v-bind:src="resultat" alt="capitaine" />
+                <div class="controller">
+                    <ul>
+                        <li>
+                            <img class="icon" src=".\\assets\\img\\crewmate.png" alt="crew" />
+                            <h2>
+                                {{members}}
+                            </h2>
+                        </li>
+                        <li>
+                            <img class="icon" src=".\\assets\\img\\lightning.png" alt="spaceship" />
+                            <h2>
+                                {{ship}}
+                            </h2>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <button v-on:click="Button1" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXTB1}}</button>
+                        <button v-on:click="Button2" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXTB2}}</button>
+                        <button v-on:click="readTag()" v-on:mouseover="Twice" v-on:mouseleave="Part">{{TXTB3}}</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <pre>
+                Jeu développé par Félix Delesalle et Lilian Sananikone, étudiants au CNAM-ENJMIN.
+            </pre>
+        </footer>
+    </div>
+</template>
+
 <script>
-    import NFCRead from './utilities/nfcmanager';
     export default {
         el: "#hello",
         data() {
@@ -37,7 +85,7 @@
                 CB2: [-1, -2, -3, -3, -2, -3, -3, -2, -3, -1, -1, -2, -1, -5, -3, -2],
                 TXTB1: "", //textes des boutons
                 TXTB2: "",
-                TXTB3:"Joker!",
+                TXTB3: "Joker!",
                 TXT1: ["En route vers l'aventure!", //texte bouton 1
                     "Ignorer Patrick",
                     "Présurisez l'engin",
@@ -78,7 +126,7 @@
                 ship: 21,
                 sauts: 12,
                 Titre: "Atteindrez vous la planète Mars?",
-                joker: 3,
+                joker: 1,
                 verif: "joker",
             }
         },
@@ -183,7 +231,7 @@
             },
             Twice: function () {
                 this.resultat = this.items[1];
-        },
+            },
             Pass: function () {
                 if (this.joker == 0) {
                     this.mission = "Désolé vous avez utilisé tous vos jokers! " + this.missionlist[this.missnbr];
@@ -202,55 +250,6 @@
         },
     };
 </script>
-
-<template>
-    <div class="body">
-        <head>
-            <meta charset="utf-8" />
-        </head>
-        <header>
-            <img class="icon" src=".\\assets\\logo.png" alt="logo" />
-            <h1>Juste un jeu avec 2 boutons...</h1>
-        </header>
-        <div class="game-scene">
-            <h2>{{Titre}}</h2>
-
-            <p>
-                {{mission}}
-            </p>
-            <div class="game-ui">
-                <img class="reactionImg" v-bind:src="resultat" alt="capitaine" />
-                <div class="controller">
-                    <ul>
-                        <li>
-                            <img class="icon" src=".\\assets\\img\\crewmate.png" alt="crew" />
-                            <h2>
-                                {{members}}
-                            </h2>
-                        </li>
-                        <li>
-                            <img class="icon" src=".\\assets\\img\\lightning.png" alt="spaceship" />
-                            <h2>
-                                {{ship}}
-                            </h2>
-                        </li>
-                    </ul>
-                    <div class="buttons">
-                        <button v-on:click="Button1" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXTB1}}</button>
-                        <button v-on:click="Button2" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXTB2}}</button>
-                        <button v-on:click="Pass" v-on:mouseover="Twice" v-on:mouseleave="Part">{{TXTB3}}</button>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <footer>
-            <pre>
-                Jeu développé par Félix Delesalle et Lilian Sananikone, étudiants au CNAM-ENJMIN.
-            </pre>
-        </footer>
-    </div>
-</template>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
