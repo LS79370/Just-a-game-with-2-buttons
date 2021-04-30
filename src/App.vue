@@ -1,4 +1,5 @@
 <script>
+    import NFCRead from './utilities/nfcmanager';
     export default {
         el: "#hello",
         data() {
@@ -77,7 +78,8 @@
                 ship: 21,
                 sauts: 12,
                 Titre: "Atteindrez vous la planète Mars?",
-                joker : 3,
+                joker: 3,
+                verif: "joker",
             }
         },
         mounted() {

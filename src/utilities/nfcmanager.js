@@ -3,20 +3,12 @@ export default function (Vue)
     let VueNFC = {
         readNdefTag(callback)
         {
-            let tag_info = null
+            var tag_info = "";
             chrome.nfc.read(device, {}, function (type, ndef)
             {
                 for (var i = 0; i < ndef.ndef.length; i++)
                 {
-                    tag_info = ndef.ndef[i]
-                    var info = tag_info.text.split(";")
-                    var points = info[0].split(":")
-                    store.state.card_info = {
-                        card_id: tag_info.tag_id,
-                        points: points[1],
-                        last_date_updated: info[1] + ' ' + info[2],
-                        store_id: info[3]
-                    }
+                    tag_info = tag_info + ndef.ndef[i];
                 }
                 tag_detected = true;
             });
