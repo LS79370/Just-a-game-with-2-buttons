@@ -12,10 +12,10 @@
                 resultat: "", //variable qui affiche les images. elle prend une valeur dans boup et face
                 index: 0,
                 items: [ //liste des images
-                    require(".\\assets\\img\\choice.png"),
-                    require(".\\assets\\img\\twice.png"),
-                    require(".\\assets\\img\\sweat.png"),
-                    require(".\\assets\\img\\thumbup.png")
+                    require("./assets/img/choice.png"),
+                    require("./assets/img/twice.png"),
+                    require("./assets/img/sweat.png"),
+                    require("./assets/img/thumbup.png")
                 ],
                 missions: initiateMissions(),
                 TXT1: initiateButton1(),
@@ -52,7 +52,7 @@
             <meta charset="utf-8" />
         </head>
         <header>
-            <img class="icon" src=".\\assets\\logo.png" alt="logo" />
+            <img class="icon" src="./assets/logo.png" alt="logo" />
             <h1>Juste un jeu avec 2 boutons...</h1>
         </header>
         <div class="game-scene">
@@ -65,13 +65,13 @@
                 <div class="controller">
                     <ul>
                         <li>
-                            <img class="icon" src=".\\assets\\img\\crewmate.png" alt="crew" />
+                            <img class="icon" src="./assets/img/crewmate.png" alt="crew" />
                             <h2>
                                 15
                             </h2>
                         </li>
                         <li>
-                            <img class="icon" src=".\\assets\\img\\lightning.png" alt="spaceship" />
+                            <img class="icon" src="./assets/img/lightning.png" alt="spaceship" />
                             <h2>
                                 20
                             </h2>
@@ -94,7 +94,7 @@
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-    @import '.\\stylesheets\\style.css';
+    @import './stylesheets/style.css';
 </style>
 
 
