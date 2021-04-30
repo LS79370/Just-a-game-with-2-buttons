@@ -32,6 +32,10 @@ function initiateButton1() {
 
     var txt15 = "AU COMBAT!";
 
-    return [txt0, txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10, txt11, txt12, txt13, txt14, txt15]
+    var txt16 = "Bravo!";
+
+    var txt17 = "Perdu!";
+
+    return [txt0, txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10, txt11, txt12, txt13, txt14, txt15, txt16, txt17]
 }
 export default initiateButton1

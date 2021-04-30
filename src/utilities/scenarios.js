@@ -32,7 +32,11 @@ function initiateMissions()
 
     var mission_15 = "Il y a une mutinerie dans votre vaisseau, protégez-vous et condamnez l'accès au pont (-2<img class='littleIcon' src='../../lightning.png' alt='spaceship'/>) ou laissez vous approcher et tuer les mutins (-4<img class='littleIcon' src='../../crewmate.png' alt='crew'/>).";
 
-    return [mission_0, mission_1, mission_2, mission_3, mission_4, mission_5, mission_6, mission_7, mission_8, mission_9, mission_10, mission_11, mission_12, mission_13, mission_14, mission_15];
+    var mission_16 = "Vous avez réussi! Vous êtes arrivés à atteidre la planète Mars! La planète rouge est à vous! Vous serez inscrit dans l'histoire !";
+
+    var mission_17 = "Mince! Vous avez raté votre mission... Que ce soit par manque de personnel, ou que votre vaisseau est devenu une véritable passoire, il n'empêche que vous avez perdu !";
+
+    return [mission_0, mission_1, mission_2, mission_3, mission_4, mission_5, mission_6, mission_7, mission_8, mission_9, mission_10, mission_11, mission_12, mission_13, mission_14, mission_15, mission_16, mission_17];
 }
 
 export default initiateMissions

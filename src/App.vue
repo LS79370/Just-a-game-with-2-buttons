@@ -11,7 +11,7 @@
                 previous: 0,
                 resultat: "", //variable qui affiche les images. elle prend une valeur dans boup et face
                 index: 0,
-                items: [ //liste des images
+                images: [ //liste des images
                     require("./assets/img/choice.png"),
                     require("./assets/img/twice.png"),
                     require("./assets/img/sweat.png"),
@@ -20,8 +20,6 @@
                 missions: initiateMissions(),
                 TXT1: initiateButton1(),
                 TXT2: initiateButton2(),
-                TXTB1: "", //texte des boutons
-                TXTB2: "",
                 TXTB3: "Joker!",
                 CB1: [0, -1, -1, -1, -1, -4, -3, -1, -2, -2, -4, -1, -1, -3, -3, -4, 0, 0], //listes des prix
                 CB2: [-1, -2, -3, -3, -2, -3, -3, -2, -3, -1, -1, -2, -1, -5, -3, -2, 0, 0],
@@ -42,10 +40,8 @@
         },
         methods: {
             cycle: function () { // sert à initialiser l'image, le texte les coûts
-                this.resultat = this.items[2];
+                this.resultat = this.images[2];
                 this.missions = this.missionlist[this.missnbr];
-                this.TXTB1 = this.TXT1[this.missnbr];
-                this.TXTB2 = this.TXT2[this.missnbr];
             },
             Button1: function () { //paye le coût en members, vérifie si les members est supp à 0, si oui, continue, sinon echec. Si oui, décrémente sauts, jusqu'à victoire
                 if (this.missnbr == 3 || this.missnbr == 4 || this.missnbr == 0) {
@@ -110,36 +106,30 @@
             },
             Victoire: function () { //Vous avez gagné
                 this.joker = 0;
-                this.resultat = this.items[3];
+                this.resultat = this.images[3];
                 this.Titre = "VICTOIRE!";
                 this.missnbr = 16;
                 this.missions = this.missionlist[this.missnbr];
-                this.TXTB1 = this.TXT2[16];
-                this.TXTB2 = this.TXT2[16];
-                this.TXTB3 = this.TXT2[16];
             },
             echec: function () { //Vous avez perdu
                 this.members = 0;
                 this.ship = 0;
-                this.resultat = this.items[2];
+                this.resultat = this.images[2];
                 this.missnbr = 17;
                 this.Titre = "Oh non!";
                 this.missions = this.missionlist[this.missnbr];
-                this.TXTB1 = this.TXT2[17];
-                this.TXTB2 = this.TXT2[17];
-                this.TXTB3 = this.TXT2[17];
             },
             Tension: function () {
-                this.resultat = this.items[0];
+                this.resultat = this.images[0];
             },
             Part: function () {
-                this.resultat = this.items[2]
+                this.resultat = this.images[2]
                 if (this.sauts == 0) {
-                    this.resultat = this.items[3];
+                    this.resultat = this.images[3];
                 }
             },
             Twice: function () {
-                this.resultat = this.items[1];
+                this.resultat = this.images[1];
             },
             Pass: function () {
                 if (this.joker <= 0) {
@@ -192,8 +182,8 @@
                         </li>
                     </ul>
                     <div class="buttons">
-                        <button v-on:click="Button1" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXTB1}}</button>
-                        <button v-on:click="Button2" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXTB2}}</button>
+                        <button v-on:click="Button1" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT1[this.missnbr]}}</button>
+                        <button v-on:click="Button2" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT2[this.missnbr]}}</button>
                         <button v-on:click="Pass" v-on:mouseover="Twice" v-on:mouseleave="Part">{{TXTB3}}</button>
                     </div>
 
