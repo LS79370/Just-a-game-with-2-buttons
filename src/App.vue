@@ -42,7 +42,7 @@
         <div class="game-scene">
             <h2>Atteindrez-vous la planète Mars ?</h2>
             <p>
-                {{ missions[0] }}
+                <span v-html="missions[0]"></span>
             </p>
             <div class="game-ui">
                 <img class="reactionImg" v-bind:src="resultat" alt="capitaine" />
