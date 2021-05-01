@@ -37,9 +37,15 @@ Si l'appareil que vous utilisez (tï¿½lï¿½phone, tablette, ordinateur...) est com
 
 Cela nï¿½cessite en revanche de programmer la puce au prï¿½alable pour l'utiliser. (Comme pour les piles, c'est pas fourni ! )
 #### Programmer une puce NFC
+<<<<<<< HEAD
 Pour programmer la puce, il vous faut un lecteur NFC compatible comme **NFC Tools** sur Android ou sur PC. Dans NFC Tools par exemple, il faut sï¿½lectionner l'option "**ajouter un enregistrement**", puis celle de "**Texte**". Ensuite, il suffit d'**ï¿½crire le message 'skip'**, puis cliquer sur "**Ecrire**" et passer la puce sur le lecteur. L'application ï¿½crit dans la puce le texte 'skip'. 
 Ce mot de passe sera utilisï¿½ pour **lancer la fonction de joker**. Une fois ceci fait, votre puce est prï¿½te. Vous pouvez commencer ï¿½ jouer, et si un ï¿½venement est trop difficile, il suffit juste de scanner la puce.
 L'ï¿½venement en question est passï¿½ grï¿½ce au joker, ce qui vous permet de ne pas payer les coï¿½ts de celui-ci. Evidemment, vous ne pourrez utiliser ce joker qu'une seule fois.
+=======
+Pour programmer la puce, il vous faut un lecteur NFC compatible comme **NFC Tools** sur Android ou sur PC. Dans NFC Tools par exemple, il faut sélectionner l'option "**ajouter un enregistrement**", puis celle de "**Texte**". Ensuite, il suffit d'**écrire le message 'skip'**, puis cliquer sur "**Ecrire**" et passer la puce sur le lecteur. L'application écrit dans la puce le texte 'skip'. 
+Ce mot de passe sera utilisé pour **lancer la fonction de joker**. Une fois ceci fait, votre puce est prête. Vous pouvez commencer à jouer, et si un évenement est trop difficile, il suffit juste de scanner la puce.
+L'évenement en question est passé grâce au joker, ce qui vous permet de ne pas payer les coûts de celui-ci. Evidemment, vous ne pourrez utiliser ce joker qu'une seule fois.
+>>>>>>> main
 ### Notre charte graphique
 #### Mon 1er est un ensemble d'images et de couleurs...
 ![image](./src/assets/img/readme/charteGraphique1.PNG)
