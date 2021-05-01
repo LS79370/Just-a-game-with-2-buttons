@@ -37,6 +37,7 @@
             initiateMissions();
             initiateButton1();
             initiateButton2();
+            this.Pass();
 
         },
         methods: {
