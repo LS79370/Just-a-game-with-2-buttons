@@ -9,7 +9,7 @@ function initiateButton2() {
 
   var txt4 = "Laisser Javast faire";
 
-  var txt5 = "R�parer les cabines";
+  var txt5 = "Réparer les cabines";
 
   var txt6 = "Continuer";
 
@@ -25,7 +25,7 @@ function initiateButton2() {
 
   var txt12 = "Envoyer un drone";
 
-  var txt13 = "R�parer le syst�me";
+  var txt13 = "Réparer le compartiment";
 
   var txt14 = "POUR LES CHIPS !";
 

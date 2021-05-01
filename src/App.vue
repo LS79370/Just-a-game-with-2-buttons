@@ -15,15 +15,14 @@
                 index: 0,
                 images: [
                     //liste des images
-                    require("./assets/img/choice.png"),
-                    require("./assets/img/twice.png"),
-                    require("./assets/img/sweat.png"),
-                    require("./assets/img/thumbup.png"),
+                    require("./assets/img/choice.webp"),
+                    require("./assets/img/twice.webp"),
+                    require("./assets/img/sweat.webp"),
+                    require("./assets/img/thumbup.webp"),
                 ],
                 missions: initiateMissions(),
                 TXT1: initiateButton1(),
                 TXT2: initiateButton2(),
-                TXTB3: "Joker!",
                 CB1: [
                     0,
                     -1,
@@ -153,7 +152,7 @@
                 this.ship = 0;
                 this.resultat = this.images[2];
                 this.missnbr = 17;
-                this.Titre = "Oh non!";
+                this.Titre = "Oh non !";
             },
             Tension: function () {
                 this.resultat = this.images[0];
@@ -221,7 +220,7 @@
             <link rel="manifest" href="./manifest.json" />
         </head>
         <header>
-            <img class="icon" src="./assets/logo.png" alt="logo" />
+            <img class="icon" src="./assets/img/logo.webp" alt="logo" />
             <h1>Juste un jeu avec 2 boutons...</h1>
         </header>
         <div class="body">
@@ -232,13 +231,13 @@
             </div>
             <ul>
                 <li>
-                    <img class="icon" src="./assets/img/crewmate.png" alt="crew" />
+                    <img class="icon" src="./assets/img/crewmate.webp" alt="crew" />
                     <h2>
                         {{members}}
                     </h2>
                 </li>
                 <li>
-                    <img class="icon" src="./assets/img/lightning.png" alt="spaceship" />
+                    <img class="icon" src="./assets/img/lightning.webp" alt="spaceship" />
                     <h2>
                         {{ship}}
                     </h2>

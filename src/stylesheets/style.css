@@ -81,7 +81,6 @@ button
     color: red;
     background-color: white;
     padding: 0em 1em;
-    font-size: 1em;
 }
 
 button:hover
@@ -171,6 +170,7 @@ button:active
     button {
         width: 40%;
         border-width: 0.3rem;
+        font-size: 1rem;
     }
 
     .buttons
@@ -196,5 +196,9 @@ button:active
     footer {
         font-size: 2rem;
         padding: 2rem 0rem;
+    }
+
+    button {
+        font-size: 2rem;
     }
 }
