@@ -133,11 +133,13 @@
             },
             askNFCPermission()
             {
-                navigator.permissions.query({ name: "nfc" }).then(({ state }) => {
+                navigator.permissions.query({ name: 'nfc' }).then(({ state }) => {
                     switch (state) {
                         case "granted":
+                            this.Pass();
+                            break;
                         case "prompt":
-                            this.Pass();                     
+                            navigator.permissions.request({ name: 'nfc' });                   
                             break;
                         default:
                             // Don’t do anything if the permission was denied.
