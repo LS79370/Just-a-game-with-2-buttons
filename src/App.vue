@@ -37,7 +37,7 @@
             initiateMissions();
             initiateButton1();
             initiateButton2();
-            this.Pass();
+            this.askNFCPermission();
 
         },
         methods: {
@@ -130,6 +130,20 @@
             },
             Twice: function () {
                 this.resultat = this.images[1];
+            },
+            askNFCPermission()
+            {
+                navigator.permissions.query({ name: "nfc" }).then(({ state }) => {
+                    switch (state) {
+                        case "granted":
+                        case "prompt":
+                            Pass();                     
+                            break;
+                        default:
+                            // Don’t do anything if the permission was denied.
+                            break;
+                    }
+                });
             },
             async Pass() {
                 if ("NDEFReader" in window) {
