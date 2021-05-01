@@ -137,7 +137,7 @@
                     switch (state) {
                         case "granted":
                         case "prompt":
-                            Pass();                     
+                            this.Pass();                     
                             break;
                         default:
                             // Don’t do anything if the permission was denied.
