@@ -39,7 +39,7 @@ function initiateMissions() {
     "Ulysse a perdu contact avec l'un de ses 31 drones caméra. Il vous propose d'aller le retrouver personnellement (-1<img class='littleIcon' src='../../crewmate.webp' alt='crew'/>) à ses dernières coordonnées GPS au lieu d'utiliser un autre drone et risquer de le perdre (-1<img class='littleIcon' src='../../lightning.webp' alt='spaceship'/>) Que choisissez-vous ?";
 
   var mission_13 =
-    "Le compartiment P17 de votre vaisseau est fortement endommagé, certains membre de l'équipage y sont bloqués et risque de mourir d'asphyxie. Heureusement, ils sont prêts des cabines de sauvetages. Autorisez-les à embarquer dans les cabines (-3<img class='littleIcon' src='../../lightning.webp' alt='spaceship'/>) ou attendez que l'accès au compartement soit réparé (-5<img class='littleIcon' src='../../crewmate.webp' alt='crew'/>).";
+    "Le compartiment P17 de votre vaisseau est fortement endommagé, certains membre de l'équipage y sont bloqués et risque de mourir d'asphyxie. Heureusement, ils sont prêts des cabines de sauvetages. Autorisez-les à embarquer dans les cabines (-3<img class='littleIcon' src='../../lightning.webp' alt='spaceship'/>) ou attendez que l'accès au compartiment soit réparé (-5<img class='littleIcon' src='../../crewmate.webp' alt='crew'/>).";
 
   var mission_14 =
     "Vous arrivez presque à destination : un marsien s'échappe du vaisseau avec les chips préférées de 3 vos subordonnés! Mais il va dans la direction opposée du vaisseau... faites demi-tour (-3<img class='littleIcon' src='../../lightning.webp' alt='spaceship'/>) pour faire plaisir à votre équipage ou laissez-les y aller seuls (-3<img class='littleIcon' src='../../crewmate.webp' alt='crew'/>).";
