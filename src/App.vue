@@ -246,10 +246,8 @@
                 </li>
             </ul>
             <div class="buttons">
-                <button v-on:click="Button1" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT1[this.missnbr]}}</button>
-                <button v-on:click="Button2" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT2[this.missnbr]}}</button>
-                <button v-on:click="Pass" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT2[this.missnbr]}}</button>
-
+                <button v-on:click="Button1; Pass" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT1[this.missnbr]}}</button>
+                <button v-on:click="Button2; Pass" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT2[this.missnbr]}}</button>
             </div>
         </div>
         <footer>
