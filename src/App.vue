@@ -66,7 +66,7 @@
                 members: 15, //variables des membres, morceaux de vaisseau, et nombres de sauts à faire
                 ship: 21,
                 sauts: 12,
-                Titre: "Atteindrez vous la planète Mars?",
+                Titre: "Atteindrez vous la planète Mars ?",
                 joker: 1,
             };
         },
@@ -142,7 +142,7 @@
                 //Vous avez gagné
                 this.joker = 0;
                 this.resultat = this.images[3];
-                this.Titre = "VICTOIRE!";
+                this.Titre = "VICTOIRE !";
                 this.missnbr = 16;
             },
             echec: function () {
@@ -225,7 +225,9 @@
         </header>
         <div class="body">
             <h2 class="title">{{Titre}}</h2>
-            <span v-html="missions[this.missnbr]"></span>
+            <div class="missions">
+                <span v-html="missions[this.missnbr]"></span>
+            </div>
             <div class="captnImg">
                 <img v-bind:src="resultat" alt="capitaine" />
             </div>
@@ -235,12 +237,12 @@
                     <h2>
                         {{members}}
                     </h2>
-                </li>
+                    </li>
                 <li>
                     <img class="icon" src="./assets/img/lightning.webp" alt="spaceship" />
-                    <h2>
+                     <h2>
                         {{ship}}
-                    </h2>
+                     </h2>
                 </li>
             </ul>
             <div class="buttons">

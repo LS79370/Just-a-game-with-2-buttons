@@ -32,7 +32,6 @@ footer {
 h1
 {
     color : white;
-    font-size: 3rem;
     font-family: 'Verdana', sans-serif;
     margin: 0;
     padding: 0;
@@ -41,22 +40,27 @@ h1
 h2 {
     color: black;
     font-family: 'Space Mono', monospace;
-    font-size: 3rem;
     text-align: center;
     margin: 0;
 }
 
-span {
+.missions
+{
     grid-area: missions;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    
     font-family: 'Space Mono', monospace;
-    font-size: 1.5rem;
     text-align: justify;
 }
 
 .title {
     grid-area: title;
-    margin-top: 1rem;
-    padding-top: 2rem;
 }
 
 ul {
@@ -72,10 +76,6 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-img{
-    height: 25em;
-    width: auto;
 }
 
 button
@@ -114,13 +114,6 @@ button:active
     justify-content: space-evenly;
 }
 
-.icon
-{
-    height: 4rem;
-    width: auto;
-    margin-right: 1rem;
-}
-
 .littleIcon {
     height: 1.25em;
     width: auto;
@@ -131,10 +124,6 @@ button:active
 
 .captnImg {
     grid-area: captnImg;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 .captnImg > img {
@@ -143,27 +132,35 @@ button:active
 }
 
 
-@media screen and (max-width: 769px) {
+@media screen and (min-width: 320px) and (max-width: 769px) {
     .body {
         grid-template-columns: 100%;
-        grid-template-rows: 25% 25% 10% 30% 10%;
+        grid-template-rows: 15% 30% 5% 40% 10%;
         grid-template-areas: "title"
-                             "missions"
-                             "ul"
-                             "captnImg"
-                             "buttons"
+            "missions"
+            "ul"
+            "captnImg"
+            "buttons"
     }
 
-    h1{
+    h1 {
         font-size: 1rem;
     }
 
-    .title {
+    h2 {
+        padding: 0 1rem;
         font-size: 1.5rem;
     }
 
-    span {
+    .title {
         font-size: 1rem;
+        margin: 0;
+        padding-top: 1rem;
+    }
+
+    span {
+        font-size: 0.8rem;
+        padding: 0 1.5rem;
     }
 
     footer {
@@ -173,13 +170,27 @@ button:active
 
     button {
         width: 40%;
+        height: 100%;
         border-width: 0.3rem;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
-    .buttons
-    {
-       margin-bottom: 1rem;
+    .buttons {
+        margin-bottom: 0.5rem;
+    }
+
+    .captnImg {
+        grid-area: captnImg;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon {
+        height: 2rem;
+        width: auto;
+        margin-right: 1rem;
     }
 }
 
@@ -188,13 +199,31 @@ button:active
     .body {
         margin: 0 3rem;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 20% 25% 10% 20% 15% 10%;
+        grid-template-rows: 15% 20% 10% 25% 15% 15%;
         grid-template-areas:"title title"
                             "missions missions"
                             "captnImg ul"
                             "captnImg . "
                             "captnImg buttons"
                             "captnImg . "
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .title {
+        margin-top: 1rem;
+        padding-top: 2rem;
+    }
+
+    span {
+        font-size: 1.5rem;
+        padding: 0 7rem;
     }
 
     footer {
@@ -204,5 +233,18 @@ button:active
 
     button {
         font-size: 2rem;
+    }
+
+    .captnImg {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .icon {
+        height: 4rem;
+        width: auto;
+        margin-right: 1rem;
     }
 }
