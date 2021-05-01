@@ -83,7 +83,6 @@
                 this.resultat = this.images[2];
             },
             Button1: function () {
-                this.Pass();
                 //paye le coût en members, vérifie si les members est supp à 0, si oui, continue, sinon echec. Si oui, décrémente sauts, jusqu'à victoire
                 if (this.missnbr == 3 || this.missnbr == 4 || this.missnbr == 0) {
                     this.members = this.members + this.CB1[this.missnbr];
@@ -118,7 +117,6 @@
                 }
             },
             Button2: function () {
-                this.Pass();
                 //paye le coût en ship, vérifie si le ship est supp à 0, si oui, continue, sinon echec. Si oui, décrémente sauts, jusqu'à victoire
                 this.ship = this.ship + this.CB2[this.missnbr];
                 if (this.ship <= 0) {
@@ -250,6 +248,8 @@
             <div class="buttons">
                 <button v-on:click="Button1" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT1[this.missnbr]}}</button>
                 <button v-on:click="Button2" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT2[this.missnbr]}}</button>
+                <button v-on:click="Pass" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT2[this.missnbr]}}</button>
+
             </div>
         </div>
         <footer>
