@@ -15,7 +15,7 @@ function initiateButton1() {
 
   var txt7 = "Ejecter un membre";
 
-  var txt8 = "La coh�sion";
+  var txt8 = "La cohésion";
 
   var txt9 = "Envoyer les subordonnes";
 
