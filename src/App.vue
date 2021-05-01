@@ -229,7 +229,7 @@
                 <span v-html="missions[this.missnbr]"></span>
             </div>
             <div class="captnImg">
-                <img v-bind:src="resultat" alt="capitaine" />
+                <img v-bind:src="resultat" @click="Pass" alt="capitaine" />
             </div>
             <ul>
                 <li>
@@ -246,8 +246,8 @@
                 </li>
             </ul>
             <div class="buttons">
-                <button v-on:click="Button1; askNFCPermission" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT1[this.missnbr]}}</button>
-                <button v-on:click="Button2; askNFCPermission" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT2[this.missnbr]}}</button>
+                <button v-on:click="Button1" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT1[this.missnbr]}}</button>
+                <button v-on:click="Button2" v-on:mouseover="Tension" v-on:mouseleave="Part">{{TXT2[this.missnbr]}}</button>
             </div>
         </div>
         <footer>
