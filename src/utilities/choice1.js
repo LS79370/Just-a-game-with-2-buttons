@@ -1,4 +1,4 @@
-function initiateButton1() {
+function initiateChoice1() {
   var txt0 = "En route vers l'aventure !";
 
   var txt1 = "Ignorer Patrick";
@@ -56,4 +56,13 @@ function initiateButton1() {
     txt17,
   ];
 }
-export default initiateButton1;
+
+function initiateCost1()
+{
+    return [0,-1,-1,-1,-1,-4,-3,-1,-2,-2,-4,-1,-1,-5,-3,-4,0,0];
+}
+
+export {
+    initiateChoice1,
+    initiateCost1
+}

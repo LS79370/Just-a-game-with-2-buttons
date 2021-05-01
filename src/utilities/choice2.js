@@ -1,4 +1,4 @@
-function initiateButton2() {
+function initiateChoice2() {
   var txt0 = "En route vers l'aventure !";
 
   var txt1 = "Faire demi-tour";
@@ -56,4 +56,12 @@ function initiateButton2() {
     txt17,
   ];
 }
-export default initiateButton2;
+
+function initiateCost2() {
+    return [-1,-2,-3,-3,-2,-3,-3,-2,-3,-1,-1,-2,-1,-3,-3,-2,0,0]
+}
+
+export {
+    initiateChoice2,
+    initiateCost2
+}
