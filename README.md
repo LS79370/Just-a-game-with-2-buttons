@@ -37,6 +37,9 @@ Si l'appareil que vous utilisez (téléphone, tablette, ordinateur...) est compati
 
 Cela nécessite en revanche de programmer la puce au préalable pour l'utiliser. (Comme pour les piles, c'est pas fourni ! )
 #### Programmer une puce NFC
+Pour accéder au joker, il faut coder une puce avec le texte "skip". Ce mot de passe est la commande permettant au site de reconnaître la puce comme un jeton joker. 
+Une fois la puce programmée, il faut juste jouer. Si un évenement est trop dûr ou que vous n'avez pas les ressources pour survivre à cet évenement, scannez la puce, et vous passerez celui-ci !
+Vous serez un saut plus proche de Mars, et le bouton joker sera désactivé jusqu'à la fin du jeu, car après tout, c'est un joker !
 ### Notre charte graphique
 #### Mon 1er est un ensemble d'images et de couleurs...
 ![image](./src/assets/img/readme/charteGraphique1.PNG)
