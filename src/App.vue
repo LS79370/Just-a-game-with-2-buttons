@@ -1,13 +1,11 @@
 <script>
     import initiateMissions from "./utilities/scenarios";
-    import initiateChoice1 from "./utilities/choice1";
-    import initiateCost1 from "./utilities/choice1";
-    import initiateChoice2 from "./utilities/choice2";
-    import initiateCost2 from "./utilities/choice2";
+    import { initiateChoice1, initiateCost1 } from "./utilities/choice1";
+    import { initiateChoice2, initiateCost2 }  from "./utilities/choice2";
     import readNFC from "./utilities/nfcmanager";
 
     export default {
-        el: "#game",
+        el: "#hello",
         data() {
             return {
                 missionsID: 0, //index de la mission en cours
@@ -26,22 +24,27 @@
                 costBtn1: initiateCost1(),//tableau contenant l'ensemble des coûts pour le 1er bouton
                 costBtn2: initiateCost2(),//tableau contenant l'ensemble des coûts pour le 2e bouton
                 lifeMembers: 15,//variable de vie : nombre de membres de votre équipe
-                lifeShip: 21,//variable de vie : partie de votre vaisseau
+                lifeShip: 20,//variable de vie : partie de votre vaisseau
                 jumps: 12,//nombre de transistion entre les missions
                 title: "Atteindrez-vous la planète Mars ?",//titre affiché sur la page
                 joker: 1,//nombre de jokers utilisables dans le jeux
             };
         },
         mounted() { //appelée lorsque la page a finie de charger et que le template est affichée
+            console.log(this);
+            console.log("blabla");
             this.init();
+            
         },
         methods: {
             init: function () {
                 //sert à initialiser l'image affichée
+                console.log(this);
+                console.log("blabla2");
                 this.showedImg = this.captainImg[2];
             },
             onClick_action1: function () {
-                //décrémente lifeMembers et vérifié si le joeur a gagné ou perdu
+                //décrémente lifeMembers et vérifié si le joueur a gagné ou perdu
                 if (this.missionsID == 3 || this.missionsID == 4 || this.missionsID == 0) {
                     this.lifeMembers = this.lifeMembers + this.costBtn1[this.missionsID];
                     this.lifeShip = this.lifeShip - 1;
@@ -75,7 +78,7 @@
                 }
             },
             onClick_action2: function () {
-                //décrémente lifeShip et vérifié si le joeur a gagné ou perdu
+                //décrémente lifeShip et vérifié si le joueur a gagné ou perdu
                 this.lifeShip = this.lifeShip + this.costBtn2[this.missionsID];
                 if (this.lifeShip <= 0) {
                     this.lifeShip = 0;
