@@ -30,10 +30,10 @@ Le jeu *Sort the court* est notre principale inspiration. Dans ce jeu, vous diri
 Dans notre jeu, vous devez alterner entre sacrifier **des membres de votre équipage** ou **des parties de votre vaisseau** le temps d'un trajet vers Mars, le but étant d'arriver sur la planète dans un vaisseau (pas forcément entier) et avec une équipe (plus ou moins réduite).
 ### Un petit plus
 Nous avons eu l'idée d'ajouter un joker dans le jeu, à utilisation unique ! Il vous permettra de passer une des péripéties les plus difficiles !
-Il s'agit d'un 3e bouton, mais bon... les gros boutons rouges, c'était déjà pris !
+Il s'agit d'un 3e bouton, mais celui-ci est caché dans l'image !
 #### Comment ?
 Ainsi, nous n'utiliserons pas de bouton pour ce joker mais une puce... non pas une puce d'un marchien,  une puce **NFC** !
-Si l'appareil que vous utilisez (téléphone, tablette, ordinateur...) est compatible au **NFC**, il vous suffit de scanner la puce avec votre appareil pour utiliser le joker.
+Si l'appareil que vous utilisez (téléphone, tablette, ordinateur...) est compatible au **NFC**, il vous suffit de cliquer sur l'image (n'importe où), puis scanner la puce avec votre appareil pour utiliser le joker.
 
 Cela nécessite en revanche de programmer la puce au préalable pour l'utiliser. (Comme pour les piles, c'est pas fourni ! )
 #### Programmer une puce NFC
