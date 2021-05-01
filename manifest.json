@@ -1,15 +1,16 @@
 {
-    "background_color": "purple",
-        "description": "Votre aventure vers Mars vous attends!",
-            "display": "fullscreen",
-                "icons": [
-                    {
-                        "src": "./src/assets/logo.png   ",
-                        "sizes": "192x192",
-                        "type": "image/png"
-                    }
-                ],
-                    "name": "Just a game with 2 Buttons",
-                        "short_name": "Buttons",
-                            "start_url": "./src/App.vue"
+    "name": "Just a Game with 2 buttons",
+    "short_name" : "2 Buttons",
+    "start_url": "/src/App.vue",
+    "display" : "standalone",
+    "background_color" : "#ffffff",
+    "theme-color" : "#ffffff",
+    "orientation" : "portrait-primary",
+    "icons": [
+      {
+      "src": "/src/assets/logo.png",
+      "type": "image/png",
+      "size": "512x512",
+      }
+    ]
 }

@@ -218,7 +218,7 @@ export default {
   <div class="body">
     <head>
       <meta charset="utf-8" />
-        <link rel="manifest" href="manifest.json" />
+        <link rel="manifest" href="./manifest.json" />
     </head>
     <header>
       <img class="icon" src="./assets/logo.png" alt="logo" />
