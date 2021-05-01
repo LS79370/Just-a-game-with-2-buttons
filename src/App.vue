@@ -193,7 +193,6 @@ export default {
             if (this.decodedNFC == "skip") {
               if (this.joker <= 0) {
                 this.joker = 0;
-<<<<<<< HEAD
               } else {
                 this.joker = this.joker - 1;
                 this.sauts = this.sauts - 1;
@@ -201,77 +200,6 @@ export default {
                 this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
                 while (this.previous == this.missnbr || this.missnbr == 0) {
                   this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
-=======
-                this.resultat = this.images[3];
-                this.Titre = "VICTOIRE!";
-                this.missnbr = 16;
-            },
-            echec: function () { //Vous avez perdu
-                this.joker = 0;
-                this.members = 0;
-                this.ship = 0;
-                this.resultat = this.images[2];
-                this.missnbr = 17;
-                this.Titre = "Oh non!";
-            },
-            Tension: function () {
-                this.resultat = this.images[0];
-            },
-            Part: function () {
-                this.resultat = this.images[2]
-                if (this.sauts == 0) {
-                    this.resultat = this.images[3];
-                }
-            },
-            Twice: function () {
-                this.resultat = this.images[1];
-            },
-            askNFCPermission()
-            {
-                navigator.permissions.query({ name: 'nfc' }).then(({ state }) => {
-                    switch (state) {
-                        case "granted":
-                            this.Pass();
-                            break;
-                        case "prompt":
-                            navigator.permissions.request({ name: 'nfc' });                   
-                            break;
-                        default:
-                            // Don’t do anything if the permission was denied.
-                            break;
-                    }
-                });
-            },
-            async Pass() {
-                if ("NDEFReader" in window) {
-                    const ndef = new NDEFReader();
-                    try {
-                        await ndef.scan();
-                        ndef.onreading = event => {
-                            const decoder = new TextDecoder();
-                            /*global NDEFReader*/
-                            let record = event.message.records[0];
-                            this.decodedNFC = decoder.decode(record.data);
-                            if (this.decodedNFC == "skip") {
-                                if (this.joker <= 0) {
-                                    this.joker = 0;
-                                }
-                                else {
-                                    this.joker = this.joker - 1;
-                                    this.sauts = this.sauts - 1;
-                                    this.previous = this.missnbr;
-                                    this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
-                                    while (this.previous == this.missnbr || this.missnbr == 0) {
-                                        this.missnbr = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
-                                    }
-                                    this.cycle();
-                                }
-                            }
-                        }
-                    } catch (error) {
-                        this.Titre = error;
-                    }
->>>>>>> main
                 }
                 this.cycle();
               }
@@ -290,6 +218,7 @@ export default {
   <div class="body">
     <head>
       <meta charset="utf-8" />
+        <link rel="manifest" href="manifest.json" />
     </head>
     <header>
       <img class="icon" src="./assets/logo.png" alt="logo" />
