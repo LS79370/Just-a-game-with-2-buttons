@@ -2,6 +2,7 @@
     import initiateMissions from "./utilities/scenarios";
     import initiateButton1 from "./utilities/Bouton1";
     import initiateButton2 from "./utilities/Bouton2";
+    import VueSimpleAlert from "vue-simple-alert";
 
     export default {
         el: "#hello",
