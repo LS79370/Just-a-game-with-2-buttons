@@ -1,12 +1,12 @@
-.site{
+.site {
     background-color: grey;
+    width: 100%;
+    height: 100%;
 }
 
 .body {
     background-color: white;
-    display: grid;
-    width: 100%;
-    height: 100%;
+    display: grid; 
 }
 
 header {
@@ -80,11 +80,11 @@ li {
 
 button
 {
-    border: 0.5em solid red;
-    border-radius: 1em;
+    border: 0.5rem solid red;
+    border-radius: 0.8rem;
     color: red;
     background-color: white;
-    padding: 0em 1em;
+    padding: 0em 0.8rem;
 }
 
 button:hover
@@ -232,7 +232,8 @@ button:active
     }
 
     button {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        width: 30%
     }
 
     .captnImg {
