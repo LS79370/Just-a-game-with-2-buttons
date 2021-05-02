@@ -193,7 +193,7 @@
             </ul>
             <div class="buttons">
                 <button v-on:click="onClick_action1" v-on:mouseover="onOver_switchImg" v-on:mouseleave="onLeave_switchImg">{{textBtn1[this.missionsID]}}</button>
-                <button v-show="btnIsShowing" v-on:click="onClick_action2" v-on:mouseover="onOver_switchImg" v-on:mouseleave="onLeave_switchImg">{{textBtn2[this.missionsID]}}</button>
+                <button v-on:click="onClick_action2" v-on:mouseover="onOver_switchImg" v-on:mouseleave="onLeave_switchImg" v-show="btnIsShowing">{{textBtn2[this.missionsID]}}</button>
             </div>
         </div>
         <footer>

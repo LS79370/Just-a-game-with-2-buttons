@@ -80,13 +80,6 @@ button:hover /** apparence d'un bouton au survol **/ {
     background-color: red;
 }
 
-button:focus
-{
-    border-color: red;
-    color: red;
-    background-color: white;
-}
-
 button:active /** apparence d'un bouton au clic **/ {
     border-color: red;
     color: red;
