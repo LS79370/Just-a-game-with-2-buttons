@@ -129,10 +129,8 @@
             onClick_useJoker: function ()
             {
                 //appelle l'utilisation du joker
-                try
-                {
-
-                    if (readNFC()) {//vérifie si le message de la puce correspond au message attendu
+                readNFC().then(isJoker => {
+                    if(isJoker) {
                         if (this.joker <= 0)
                         {
                             this.joker = 0;
@@ -151,12 +149,13 @@
                             }
                             this.init();
                         }
+                    } else {
+                    this.title = " Cette puce n'est pas un Joker.";
                     }
-                }
-                catch (error)
+                }).catch (error =>
                 {
-                        this.title = " Utilisation du joker : Appareil incompatible ou permission refusée !";
-                }
+                    this.title = error.message;
+                });
             },
         },
     };
