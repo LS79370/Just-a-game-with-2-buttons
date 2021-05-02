@@ -23,6 +23,7 @@
                 textBtn2: initiateChoice2(),//tableau contenant l'ensemble des choix du 2nd bouton
                 costBtn1: initiateCost1(),//tableau contenant l'ensemble des coûts pour le 1er bouton
                 costBtn2: initiateCost2(),//tableau contenant l'ensemble des coûts pour le 2e bouton
+                btnIsShowing: false, //si faux, cache un des 2 boutons au début
                 lifeMembers: 15,//variable de vie : nombre de membres de votre équipe
                 lifeShip: 20,//variable de vie : partie de votre vaisseau
                 jumps: 12,//nombre de transistion entre les missions
@@ -40,6 +41,9 @@
                 this.showedImg = this.captainImg[1];
             },
             onClick_action1: function () {
+                if (this.btnIsShowing == false) {
+                    this.btnIsShowing = true; //affiche le 2e bouton quand la partie commence
+                }
                 //décrémente lifeMembers et vérifié si le joueur a gagné ou perdu
                 if (this.missionsID == 3 || this.missionsID == 4 || this.missionsID == 0) {
                     this.lifeMembers = this.lifeMembers + this.costBtn1[this.missionsID];
@@ -189,7 +193,7 @@
             </ul>
             <div class="buttons">
                 <button v-on:click="onClick_action1" v-on:mouseover="onOver_switchImg" v-on:mouseleave="onLeave_switchImg">{{textBtn1[this.missionsID]}}</button>
-                <button v-on:click="onClick_action2" v-on:mouseover="onOver_switchImg" v-on:mouseleave="onLeave_switchImg">{{textBtn2[this.missionsID]}}</button>
+                <button v-show="btnIsShowing" v-on:click="onClick_action2" v-on:mouseover="onOver_switchImg" v-on:mouseleave="onLeave_switchImg">{{textBtn2[this.missionsID]}}</button>
             </div>
         </div>
         <footer>
