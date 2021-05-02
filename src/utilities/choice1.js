@@ -1,4 +1,4 @@
-function initiateChoice1() {
+function initiateChoice1() { //retourne toutes les inscriptions affichées sur le 1er bouton
   var txt0 = "En route vers l'aventure !";
 
   var txt1 = "Ignorer Patrick";
@@ -58,7 +58,7 @@ function initiateChoice1() {
 }
 
 function initiateCost1()
-{
+{//retourne les facteurs de dégâts infligés par le clic du bouton
     return [0,-1,-1,-1,-1,-4,-3,-1,-2,-2,-4,-1,-1,-5,-3,-4,0,0];
 }
 

@@ -1,4 +1,4 @@
-function initiateChoice2() {
+function initiateChoice2() {//retourne toutes les inscriptions affichées sur le 2nd bouton
   var txt0 = "En route vers l'aventure !";
 
   var txt1 = "Faire demi-tour";
@@ -57,7 +57,7 @@ function initiateChoice2() {
   ];
 }
 
-function initiateCost2() {
+function initiateCost2() {//retourne les facteurs de dégâts infligés par le clic du bouton
     return [-1, -2, -3, -3, -2, -3, -3, -2, -3, -1, -1, -2, -1, -3, -3, -2, 0, 0];
 }
 

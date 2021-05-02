@@ -9,9 +9,9 @@ async function readNFC()
             await ndef.scan();//attend que l'appareil scanne une puce NFC
             ndef.onreading = (event) => {
                 const decoder = new TextDecoder();
-                let record = event.message.records[0];
+                let record = event.message.records[0];//on récupère le message enregistré dans la puce
 
-                return decoder.decode(record.data);
+                return decoder.decode(record.data);//on retourne le message décodé
             }
         }
         catch (error) {

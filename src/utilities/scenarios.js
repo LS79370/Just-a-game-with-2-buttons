@@ -53,7 +53,7 @@ function initiateMissions() {
   var mission_17 =
     "Mince! Vous avez raté votre mission... Que ce soit par manque de personnel, ou que votre vaisseau est devenu une véritable passoire, il n'emp�che que vous avez perdu !";
 
-  return [
+  return [//retourne toutes les épreuves du jeu
     mission_0,
     mission_1,
     mission_2,
