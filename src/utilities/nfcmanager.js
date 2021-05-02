@@ -11,7 +11,9 @@ async function readNFC()
             ndef.onreading = (event) => {
                 const decoder = new TextDecoder();
                 let record = event.message.records[0];//on récupère le message enregistré dans la puce
-                console.log(record.data)
+                console.log(event);
+                console.log(event.message);
+                console.log(event.message.record);
                 var textTag= decoder.decode(record.data);
                 return textTag === "Passe"                
             }
