@@ -31,17 +31,13 @@
             };
         },
         mounted() { //appelée lorsque la page a finie de charger et que le template est affichée
-            console.log(this);
-            console.log("blabla");
             this.init();
             
         },
         methods: {
             init: function () {
                 //sert à initialiser l'image affichée
-                console.log(this);
-                console.log("blabla2");
-                this.showedImg = this.captainImg[2];
+                this.showedImg = this.captainImg[1];
             },
             onClick_action1: function () {
                 //décrémente lifeMembers et vérifié si le joueur a gagné ou perdu
