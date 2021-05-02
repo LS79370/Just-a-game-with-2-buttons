@@ -126,7 +126,7 @@
                     this.showedImg = this.captainImg[3];
                 }
             },
-            async onClick_useJoker()
+            onClick_useJoker: function ()
             {
                 //appelle l'utilisation du joker
                 try
