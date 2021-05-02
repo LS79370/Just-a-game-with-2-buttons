@@ -28,7 +28,7 @@
                 lifeShip: 20,//variable de vie : partie de votre vaisseau
                 jumps: 12,//nombre de transistion entre les missions
                 title: "Atteindrez-vous la planète Mars ?",//titre affiché sur la page
-                joker: 1,//nombre de jokers utilisables dans le jeux
+                joker: 2,//nombre de jokers utilisables dans le jeux
             };
         },
         mounted() { //appelée lorsque la page a finie de charger et que le template est affichée
