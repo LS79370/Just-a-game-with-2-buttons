@@ -131,10 +131,6 @@
                 //appelle l'utilisation du joker
                 try
                 {
-                    console.log("Test");
-                    console.log(event);
-                    console.log(event.message);
-                    console.log(event.message.record);
 
                     if (readNFC()) {//vérifie si le message de la puce correspond au message attendu
                         if (this.joker <= 0)
