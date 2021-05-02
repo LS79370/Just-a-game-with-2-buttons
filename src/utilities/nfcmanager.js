@@ -13,13 +13,7 @@ async function readNFC()
                 let record = event.message.records[0];//on récupère le message enregistré dans la puce
                 console.log(record.data)
                 var textTag= decoder.decode(record.data);
-                if (textTag == "Passe") {
-                    return true;
-                }
-                else {
-                    return false;
-                }
-                
+                return textTag === "Passe"                
             }
         }
         catch (error) {
