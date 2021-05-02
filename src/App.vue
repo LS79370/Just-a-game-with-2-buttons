@@ -105,6 +105,7 @@
                 this.showedImg = this.captainImg[3];
                 this.title = "VICTOIRE !";
                 this.missionsID = 16;
+                this.btnIsShowing = false;//cache le 2e bouton quand la partie est gagnée
             },
             setLostGame: function () {
                 //Change certaines variables et affichage quand le joueur perd
@@ -114,6 +115,7 @@
                 this.showedImg = this.captainImg[2];
                 this.missionsID = 17;
                 this.title = "Oh non !";
+                this.btnIsShowing = false;//cache le 2e bouton quand la partie est perdue
             },
             onOver_switchImg: function () {
                 this.showedImg = this.captainImg[0];
