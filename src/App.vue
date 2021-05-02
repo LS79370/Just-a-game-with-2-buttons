@@ -131,7 +131,7 @@
                 //appelle l'utilisation du joker
                 try
                 {
-                    if (readNFC() == "skip") {//vérifie si le message de la puce correspond au message attendu
+                    if (readNFC() == "Passe") {//vérifie si le message de la puce correspond au message attendu
                         if (this.joker <= 0)
                         {
                             this.joker = 0;
